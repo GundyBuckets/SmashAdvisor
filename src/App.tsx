@@ -53,7 +53,7 @@ export default function App() {
         </div>
       </header>
 
-      <main className="flex-1 max-w-4xl w-full mx-auto p-4 flex flex-col gap-4">
+      <main className="flex-1 max-w-2xl w-full mx-auto p-4 flex flex-col gap-4">
         {playerProfile && opponentProfile ? (
           <MatchupView
             player={playerProfile}
