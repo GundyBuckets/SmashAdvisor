@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { roster } from './data/roster.js';
 import { characterRegistry } from './data/characters/index.js';
+import { resolveMatchup } from './utils/matchupResolver.js';
 import { CharacterGrid } from './components/CharacterGrid.js';
 import { MatchupView } from './components/MatchupView.js';
 
@@ -37,7 +38,7 @@ export default function App() {
   const playerProfile = playerId ? characterRegistry[playerId] : null;
   const opponentProfile = opponentId ? characterRegistry[opponentId] : null;
   const matchupData =
-    playerProfile && opponentId ? playerProfile.matchups[opponentId] : undefined;
+    playerProfile && opponentProfile ? resolveMatchup(playerProfile, opponentProfile) : undefined;
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col">
@@ -48,7 +49,7 @@ export default function App() {
             SmashAdvisor
           </h1>
           <span className="text-xs font-semibold text-slate-400 bg-slate-800 px-2 py-0.5 rounded">
-            v1.0 MVP
+            v0.2 Dev Build
           </span>
         </div>
       </header>
