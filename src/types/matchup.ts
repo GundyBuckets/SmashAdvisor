@@ -5,6 +5,14 @@ export type MatchupRatio =
   | "-1 (Slight Disadvantage)" 
   | "-2 (Major Disadvantage)";
 
+export type CharacterArchetype =
+  | 'Zoner / Trapper'
+  | 'Rushdown / Burst'
+  | 'Spacing / Swordie'
+  | 'Super Heavy / Grappler'
+  | 'Dynamic / Stance'
+  | 'Hit-and-Run / Speedster';
+
 export interface MatchupNote {
   ratio: MatchupRatio;
   summary: string;
@@ -12,6 +20,7 @@ export interface MatchupNote {
   advantageTips: string[];
   disadvantageTips: string[];
   stageNotes?: string[];
+  isArchetypeFallback?: boolean;
 }
 
 export interface CharacterProfile {
