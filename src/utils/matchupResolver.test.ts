@@ -65,4 +65,18 @@ describe('SmashAdvisor Data Integrity & Matchup Resolver', () => {
         `(${directCount} 1-to-1 guides, ${fallbackCount} archetype fallbacks).`
     );
   });
+  it('resolves competitive shorthand aliases case-insensitively', () => {
+    const filterRoster = (query: string) => {
+      const q = query.trim().toLowerCase();
+      return roster.filter(
+        (entry) =>
+          entry.name.toLowerCase().includes(q) ||
+          entry.aliases.some((alias) => alias.toLowerCase().includes(q))
+      );
+    };
+
+    expect(filterRoster('dk').some((c) => c.id === 'donkey_kong')).toBe(true);
+    expect(filterRoster('TL').some((c) => c.id === 'toon_link')).toBe(true);
+    expect(filterRoster('aegis').some((c) => c.id === 'pyra_mythra')).toBe(true);
+  });
 });

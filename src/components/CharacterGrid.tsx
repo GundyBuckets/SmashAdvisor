@@ -1,3 +1,4 @@
+// src/components/CharacterGrid.tsx
 import React, { useState, useMemo } from 'react';
 import type { RosterEntry } from '../data/roster.js';
 import { CharacterTile } from './CharacterTile.js';
@@ -17,66 +18,79 @@ export const CharacterGrid: React.FC<CharacterGridProps> = ({
   onSelectCharacter,
   activeSlot,
 }) => {
-  const [query, setQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
 
   const filteredRoster = useMemo(() => {
-    const cleanQuery = query.trim().toLowerCase();
-    if (!cleanQuery) return roster;
+    const q = searchQuery.trim().toLowerCase();
+    if (!q) return roster;
 
-    return roster.filter((char) => {
-      const matchesName = char.name.toLowerCase().includes(cleanQuery);
-      const matchesAlias = char.aliases.some((alias) =>
-        alias.toLowerCase().includes(cleanQuery)
-      );
-      return matchesName || matchesAlias;
-    });
-  }, [roster, query]);
+    return roster.filter(
+      (entry) =>
+        entry.name.toLowerCase().includes(q) ||
+        entry.aliases.some((alias) => alias.toLowerCase().includes(q))
+    );
+  }, [roster, searchQuery]);
 
   return (
-    <div className="flex flex-col gap-3 w-full max-w-2xl mx-auto">
-      <div className="flex items-center justify-between px-1">
-        <span className="text-sm font-semibold tracking-wide uppercase text-slate-400">
-          Selecting: <span className={activeSlot === 'player' ? 'text-blue-400' : 'text-rose-400'}>
-            {activeSlot === 'player' ? 'My Character (Slot A)' : 'Opponent (Slot B)'}
-          </span>
+    <section className="flex flex-col gap-3 w-full">
+      {/* Slot Prompt Banner */}
+      <div className="flex items-center justify-between bg-slate-900 border border-slate-800 rounded-lg px-3 py-2.5">
+        <span className="text-sm font-medium text-slate-300">
+          {activeSlot === 'player' ? (
+            <>
+              Step 1: Select <strong className="text-blue-400">Your Character (Slot A)</strong>
+            </>
+          ) : (
+            <>
+              Step 2: Select <strong className="text-rose-400">Opponent (Slot B)</strong>
+            </>
+          )}
         </span>
-        {query && (
+      </div>
+
+      {/* Search Bar (16px text-base prevents mobile browser zoom) */}
+      <div className="relative flex items-center">
+        <input
+          type="text"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          placeholder="Search fighter or alias (e.g. TL, DK, Aegis)..."
+          aria-label="Search character by name or alias"
+          className="w-full min-h-11 bg-slate-900 border border-slate-700 focus:border-blue-500 focus:outline-none rounded-lg pl-3.5 pr-12 py-2.5 text-base text-slate-100 placeholder-slate-500"
+        />
+        {searchQuery && (
           <button
             type="button"
-            onClick={() => setQuery('')}
-            className="text-xs text-slate-400 hover:text-slate-200 underline"
+            onClick={() => setSearchQuery('')}
+            aria-label="Clear search"
+            className="absolute right-1 min-h-11 min-w-11 flex items-center justify-center text-slate-400 hover:text-white text-sm font-bold cursor-pointer"
           >
-            Clear Search
+            ✕
           </button>
         )}
       </div>
 
-      <div className="relative">
-        <input
-          type="text"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search by name or alias (e.g., 'DK', 'TL', 'Roy')..."
-          className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-slate-100 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 min-h-11"
-        />
-      </div>
-
-      <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-2 max-h-95 overflow-y-auto p-1 rounded-lg border border-slate-800/80 bg-slate-900/50">
-        {filteredRoster.map((character) => (
-          <CharacterTile
-            key={character.id}
-            character={character}
-            isPlayer={character.id === selectedPlayerId}
-            isOpponent={character.id === selectedOpponentId}
-            onSelect={onSelectCharacter}
-          />
-        ))}
-        {filteredRoster.length === 0 && (
-          <div className="col-span-full py-8 text-center text-sm text-slate-400">
-            No characters found matching "{query}".
-          </div>
-        )}
-      </div>
-    </div>
+      {/* Responsive Character Grid */}
+      {filteredRoster.length > 0 ? (
+        <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-2">
+          {filteredRoster.map((entry) => (
+            <CharacterTile
+              key={entry.id}
+              character={entry}
+              isPlayer={selectedPlayerId === entry.id}
+              isOpponent={selectedOpponentId === entry.id}
+              onSelect={() => {
+                onSelectCharacter(entry.id);
+                setSearchQuery('');
+              }}
+            />
+          ))}
+        </div>
+      ) : (
+        <div className="text-center py-8 bg-slate-900/50 border border-slate-800 rounded-lg">
+          <p className="text-base text-slate-400">No fighters match "{searchQuery}"</p>
+        </div>
+      )}
+    </section>
   );
 };
