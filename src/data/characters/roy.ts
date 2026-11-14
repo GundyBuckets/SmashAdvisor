@@ -6,6 +6,104 @@ export const roy: CharacterProfile = {
     iconPath: '/icons/roy.png',
     archetype: 'Rushdown / Swordie',
     fastestOOS: 'Blazer Up-B (Frame 9, Frame 4 Armor)',
+    archetypeNotes: {
+    'Zoner / Trapper': {
+      ratio: '+1 (Slight Advantage)',
+      summary: 'Close distance with dash-shielding and punish item-pull animations with sweetspot Nair and Jab-Bair kill confirms.',
+      neutralKeys: [
+        'Walk and dash-shield through projectile walls rather than jumping into anti-air traps.',
+        'Punish item pulls or casting animations on reaction with burst Dash Attack or sweetspot Nair.',
+      ],
+      advantageTips: [
+        'Convert Frame 5 Jab into reverse Up-Air or Bair at ledge to take stocks around 85–95%.',
+        'Ledge-trap with D-tilt and Side-B (Double-Edge Dance) to cover regular getup and roll.',
+      ],
+      disadvantageTips: [
+        'Save double-jump when recovering low against lingering ledge bombs.',
+        'DI outward on zoner projectile-to-aerial kill confirms.',
+      ],
+    },
+    'Rushdown / Burst': {
+      ratio: 'Even',
+      summary: 'Win close-quarters scrambles with Frame 5 sweetspot Jab and super-armored Blazer (Up-B) Out-of-Shield reversals.',
+      neutralKeys: [
+        'Whiff-punish aggressive dash-ins with sweetspot Nair 1 into Jab or Grab.',
+        'Use Frame 9 Blazer (Up-B) OOS with early super armor to blow through unspaced shield pressure.',
+      ],
+      advantageTips: [
+        'Tech-chase fast fallers on platforms with D-tilt and Side-B red finishers.',
+        'Punish linear burst recoveries with run-off Fair or Blazer stage-spikes.',
+      ],
+      disadvantageTips: [
+        'Hold survival DI outward on burst kill confirms near the ledge.',
+        'Angle Blazer slightly inward when recovering to avoid getting clipped before ledge snap.',
+      ],
+    },
+    'Spacing / Swordie': {
+      ratio: 'Even',
+      summary: 'Weave inside tipper ranges using superior initial dash speed so Roy’s hilt sweetspots out-trade rival disjoints.',
+      neutralKeys: [
+        'Dash-dance just outside tipper spacing, then burst in during sword landing lag with Nair or Grab.',
+        'Cross up shields with fast-fall Nair to avoid Frame 5 invincible sword Up-B reversals.',
+      ],
+      advantageTips: [
+        'Confirm Jab -> Bair at 90% to kill lighter swordfighters off the side blast zone.',
+        'Contest vertical sword recoveries off-stage with fast-falling Fair.',
+      ],
+      disadvantageTips: [
+        'Never mash aerials out of hitstun against disjointed juggle strings.',
+        'Mix up high drift and angled Blazer snaps when recovering from off-stage.',
+      ],
+    },
+    'Super Heavy / Grappler': {
+      ratio: '+2 (Major Advantage)',
+      summary: 'Overwhelm massive hurtboxes with falling Up-Air chains, sweetspot Nair loops, and early Side-B kills.',
+      neutralKeys: [
+        'Pressure shields with safe spaced D-tilt and falling Nair while staying outside command grab range.',
+        'Punish heavy aerial landings with Blazer OOS or Grab into Up-Throw -> Up-Air.',
+      ],
+      advantageTips: [
+        'Chain falling Up-Airs into Jab -> Bair or Side-B red finisher to kill heavies under 90%.',
+        'Edgeguard linear recoveries with run-off Bair and Counter.',
+      ],
+      disadvantageTips: [
+        'Respect mid-percent cargo and command grab kill setups; spot-dodge grab reads.',
+        'Do not challenge armored heavy moves head-on without hilt disjoint spacing.',
+      ],
+    },
+    'Dynamic / Stance': {
+      ratio: 'Even',
+      summary: 'Rush down sluggish power stances before they swing, and bait agility evasion counters with empty-hop grabs.',
+      neutralKeys: [
+        'Contest power-stance startup frames with Frame 5 Jab and falling Nair.',
+        'Mix in empty-hop Grabs against agility stances that rely on counters or Foresight.',
+      ],
+      advantageTips: [
+        'Exploit weak vertical recoveries common to stance fighters with off-stage Fair.',
+        'Use Jab -> Bair at ledge to close stocks before power stances build rage.',
+      ],
+      disadvantageTips: [
+        'SDI outward against multi-hit agility ladder strings.',
+        'Hold shield patiently against multi-hit stance specials before reversing with Blazer.',
+      ],
+    },
+    'Hit-and-Run / Speedster': {
+      ratio: 'Even',
+      summary: 'Hold center stage and swat high-speed dash entries with rising Nair and D-tilt instead of chasing into corners.',
+      neutralKeys: [
+        'Wall out burst dash approaches with low-profile D-tilt and rising short-hop Nair.',
+        'Buffer Blazer OOS whenever speedsters cross up shield with spin attacks.',
+      ],
+      advantageTips: [
+        'Catch panic rolls from the corner with Jab -> Side-B or Bair.',
+        'Anti-air high recovery escapes with rising Up-Air.',
+      ],
+      disadvantageTips: [
+        'Avoid predictable double-jumps off-stage where speedsters can stage-spike with Bair.',
+        'Hold survival DI on sweetspot burst kill confirms.',
+      ],
+    },
+  },
     matchups: {
       toon_link: {
         ratio: '+1 (Slight Advantage)',

@@ -6,6 +6,104 @@ export const fox: CharacterProfile = {
     iconPath: '/icons/fox.png',
     archetype: 'High-Velocity Rushdown',
     fastestOOS: 'Back Air (Frame 9), Down Air (Frame 8)',
+    archetypeNotes: {
+    'Zoner / Trapper': {
+      ratio: '+1 (Slight Advantage)',
+      summary: 'Deter full-screen projectiles with Frame 1 Shine and punish item pulls on reaction with Dash Attack into Up-Air.',
+      neutralKeys: [
+        'Flash Reflector (Shine) at mid-range to discourage predictable projectile rhythms.',
+        'Punish item pulls and slow specials on reaction with burst Dash Attack -> Up-Air strings.',
+      ],
+      advantageTips: [
+        'Confirm soft Nair or Dair into Frame 8 Up-Smash to close stocks around 95–110%.',
+        'Contest floaty zoner recoveries off-stage with fast-falling Bair.',
+      ],
+      disadvantageTips: [
+        'Do not run blindly into stationary traps; use Illusion (Side-B) high to bypass ledge setups.',
+        'DI outward on zoner bomb-to-aerial confirms.',
+      ],
+    },
+    'Rushdown / Burst': {
+      ratio: 'Even',
+      summary: 'Out-frame rival rushdowns with Frame 4 Nair, Frame 7 Up-Tilt strings, and Frame 8 Up-Smash Out-of-Shield.',
+      neutralKeys: [
+        'Use low-landing Nair and Frame 7 Up-Tilt to win close-quarters frame-data scrambles.',
+        'Punish unspaced landing aerials immediately with Frame 8 Up-Smash OOS.',
+      ],
+      advantageTips: [
+        'Tech-chase fast fallers on platforms with Dash Attack and Up-Tilt loops.',
+        'Edgeguard linear burst recoveries with Shine gimps or run-off Bair.',
+      ],
+      disadvantageTips: [
+        'Mix up Illusion (Side-B) and Fire Fox angles to avoid getting spiked off-stage.',
+        'Hold strict survival DI on burst kill confirms.',
+      ],
+    },
+    'Spacing / Swordie': {
+      ratio: 'Even',
+      summary: 'Dash-dance just outside sword tipper reach and whiff-punish extended swings with Dash Attack into Up-Air.',
+      neutralKeys: [
+        'Bait sword aerials with dash retreats, then whiff-punish landing lag with Dash Attack.',
+        'Cross up shields with low Nair so fast sword Up-B OOS options miss.',
+      ],
+      advantageTips: [
+        'Carry swordfighters off the top with Up-Tilt -> Up-Air ladders.',
+        'Intercept vertical recoveries before ledge snap with run-off Bair.',
+      ],
+      disadvantageTips: [
+        'Use fast fall speed to land safely on platforms rather than challenging sword Up-Airs.',
+        'Vary recovery timing with Fire Fox stalls to throw off sword 2-frames.',
+      ],
+    },
+    'Super Heavy / Grappler': {
+      ratio: '+2 (Major Advantage)',
+      summary: 'Abuse giant hurtboxes with uninterrupted Up-Tilt and Nair loops, closing stocks early with Nair -> Up-Smash.',
+      neutralKeys: [
+        'Land with safe cross-up Nair and Dair while staying outside command grab range.',
+        'Punish heavy aerial landings with Frame 8 Up-Smash OOS.',
+      ],
+      advantageTips: [
+        'Chain 4–5 Up-Tilts into Up-Air strings on massive hurtboxes for 0–60% bursts.',
+        'Confirm soft Nair or Dair into Up-Smash starting at 105%.',
+      ],
+      disadvantageTips: [
+        'Avoid shielding predictably at mid-percents to eliminate cargo or kill-throw setups.',
+        'Save double-jump off-stage until heavies commit to ledge-guard swings.',
+      ],
+    },
+    'Dynamic / Stance': {
+      ratio: 'Even',
+      summary: 'Overwhelm sluggish power forms with Nair shield pressure and bait agility counters with empty-hop grabs.',
+      neutralKeys: [
+        'Pressure power forms relentlessly with Frame 4 Nair and Frame 7 Up-Tilt.',
+        'Bait evasion counters (like Foresight) with empty-hop grabs into Up-Air strings.',
+      ],
+      advantageTips: [
+        'Exploit weak vertical recoveries with run-off Bair or Shine intercepts.',
+        'Confirm Nair -> Up-Smash kills before power stances build high rage.',
+      ],
+      disadvantageTips: [
+        'SDI outward against multi-hit agility ladder combos.',
+        'Do not challenge high-priority power-stance smash attacks head-on.',
+      ],
+    },
+    'Hit-and-Run / Speedster': {
+      ratio: 'Even',
+      summary: 'Chip with short-hop Lasers to force approaches, then catch burst dash entries with low Nair and Up-Air ladders.',
+      neutralKeys: [
+        'Fire single Lasers at full screen to force speedsters to initiate into your center-stage control.',
+        'Intercept burst spin dashes with fast-falling Nair or Frame 7 Up-Tilt.',
+      ],
+      advantageTips: [
+        'Juggle light speedsters off the top blast zone with Up-Air chains.',
+        'Ledge-trap with Bair to cover jump and regular getup options.',
+      ],
+      disadvantageTips: [
+        'Save double-jump off-stage to avoid getting stage-spiked by deep Bairs.',
+        'Hold survival DI outward on edge kill confirms.',
+      ],
+    },
+  },
     matchups: {
       toon_link: {
         ratio: 'Even',

@@ -30,4 +30,5 @@ export interface CharacterProfile {
   archetype: string;
   fastestOOS: string;
   matchups: Record<string, MatchupNote>;
+  archetypeNotes?: Partial<Record<CharacterArchetype, MatchupNote>>;
 }

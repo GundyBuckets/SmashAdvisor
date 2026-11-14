@@ -6,6 +6,104 @@ export const lucas: CharacterProfile = {
   iconPath: '/icons/lucas.png',
   archetype: 'Zoner / Spacing Trapper',
   fastestOOS: 'Nair (Frame 10)',
+  archetypeNotes: {
+    'Zoner / Trapper': {
+      ratio: '+1 (Slight Advantage)',
+      summary: 'Heal off energy projectiles with PSI Magnet and out-poke rival zoners at mid-range using Zair (Rope Snake).',
+      neutralKeys: [
+        'Flash PSI Magnet (Down-B) to absorb energy projectiles and neutralize long-range camping.',
+        'Space Double-Jump Cancel Zair (DJCZ) to poke safely through physical projectiles.',
+      ],
+      advantageTips: [
+        'Use PK Freeze off-stage to force early air-dodges or blast-zone KOs.',
+        '2-frame ledge snaps with D-smash’s lingering triple-hit hitbox.',
+      ],
+      disadvantageTips: [
+        'Use PK Thunder 2 or long tether Zair to mix up recovery angles safely.',
+        'Save double-jump until zoners commit to ledge traps.',
+      ],
+    },
+    'Rushdown / Burst': {
+      ratio: '-1 (Slight Disadvantage)',
+      summary: 'Create a wall with DJCZ and retreating PK Fire, relying on Frame 4 Jab and Frame 7 Nair OOS when cornered.',
+      neutralKeys: [
+        'Space DJCZ and retreating short-hop Fair to stuff burst dash approaches.',
+        'Use Frame 4 Jab or Frame 7 Nair OOS when rushdown fighters land unsafely on shield.',
+      ],
+      advantageTips: [
+        'Carry rushdown fighters toward the corner with DJCZ loops into F-tilt or Grab.',
+        '2-frame linear recoveries at the ledge with D-smash.',
+      ],
+      disadvantageTips: [
+        'Use PSI Magnet stall momentum in mid-air to throw off rushdown juggle timing.',
+        'Snap to the ledge with Tether Zair whenever possible instead of risking PK Thunder.',
+      ],
+    },
+    'Spacing / Swordie': {
+      ratio: 'Even',
+      summary: 'Stay just outside sword tippers with DJCZ and retreating PK Fire, then 2-frame linear sword recoveries with D-smash.',
+      neutralKeys: [
+        'Out-range grounded sword pokes with spaced Zair and retreating PK Fire.',
+        'Punish unspaced falling sword aerials with Grab into D-throw -> Nair/Fair.',
+      ],
+      advantageTips: [
+        'Time D-smash at the ledge to catch vertical sword recoveries during 2-frame snap windows.',
+        'Send PK Freeze off-stage to force high, punishable recovery angles.',
+      ],
+      disadvantageTips: [
+        'Use PSI Magnet wavebounces to reverse landing momentum away from sword Up-Airs.',
+        'Tether snap with Zair to avoid off-stage sword Counters.',
+      ],
+    },
+    'Super Heavy / Grappler': {
+      ratio: '+2 (Major Advantage)',
+      summary: 'Push massive hurtboxes across the stage with DJCZ chains and obliterate linear recoveries with PK Freeze and Dair spikes.',
+      neutralKeys: [
+        'Chain DJCZ pokes to rack up damage and push heavies off-stage safely outside grab range.',
+        'Use retreating PK Fire and Fair to stuff giant jump approaches.',
+      ],
+      advantageTips: [
+        'Intercept linear heavy recoveries with PK Freeze, PK Thunder tail, or Dair spikes.',
+        'Ledge-trap wide hurtboxes with D-smash and Grab.',
+      ],
+      disadvantageTips: [
+        'Respect mid-percent grab kill setups; use PSI Magnet movement to avoid shielding predictably.',
+        'Save double-jump off-stage against heavy ledge guards.',
+      ],
+    },
+    'Dynamic / Stance': {
+      ratio: 'Even',
+      summary: 'Wall out agility stances with Zair and retreating Fair, and exploit weak vertical recoveries with PK Freeze and D-smash.',
+      neutralKeys: [
+        'Use Zair and retreating PK Fire to stuff agility dash-ins.',
+        'Punish slow power-stance startups with PK Fire into Grab or Fair.',
+      ],
+      advantageTips: [
+        'Edgeguard vulnerable vertical recoveries with PK Freeze and D-smash 2-frames.',
+        'Confirm Grab -> Up-Throw kills around 115–130%.',
+      ],
+      disadvantageTips: [
+        'Use PSI Magnet momentum shifts to escape multi-hit agility strings.',
+        'Avoid landing unsafely onto fast stance Out-of-Shield options.',
+      ],
+    },
+    'Hit-and-Run / Speedster': {
+      ratio: '-1 (Slight Disadvantage)',
+      summary: 'Stuff grounded burst lanes with low Zairs and PK Fire while using Frame 7 Nair OOS against shield cross-ups.',
+      neutralKeys: [
+        'Place low Zairs and retreating PK Fire in front of you to block high-speed dash lanes.',
+        'Buffer Frame 7 Nair OOS when speedsters cross up shield with spin moves.',
+      ],
+      advantageTips: [
+        'Catch panic ledge jumps with rising Fair or Up-Air.',
+        '2-frame low recovery snaps with D-smash.',
+      ],
+      disadvantageTips: [
+        'Snap early with Tether Zair so speedsters cannot stage-spike PK Thunder startups.',
+        'SDI outward against vertical ladder combos.',
+      ],
+    },
+  },
   matchups: {
       toon_link: {
         ratio: 'Even',

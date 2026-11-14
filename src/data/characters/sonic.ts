@@ -6,6 +6,104 @@ export const sonic: CharacterProfile = {
   iconPath: '/icons/sonic.png',
   archetype: 'Hit-and-Run / Speedster',
   fastestOOS: 'Back Air (Frame 8), Up-B (Frame 4 Invulnerable)',
+  archetypeNotes: {
+    'Zoner / Trapper': {
+      ratio: '+1 (Slight Advantage)',
+      summary: 'Weave through projectile gaps with Spin Dash and punish item-pull animations on reaction from half-stage.',
+      neutralKeys: [
+        'Dash-cancel and charge Spin Dash outside projectile reach to punish pulling animations on reaction.',
+        'Use Homing Attack to punish high-lag projectile throws safely.',
+      ],
+      advantageTips: [
+        'Carry floaty zoners off-stage with Spin Dash -> Fair/Bair strings.',
+        'Drop Spring (Up-B) off-stage above vertical recoveries to gimp early.',
+      ],
+      disadvantageTips: [
+        'Do not auto-pilot Spin Dash blindly into stationary bombs or traps.',
+        'DI outward on zoner projectile-to-aerial kill confirms.',
+      ],
+    },
+    'Rushdown / Burst': {
+      ratio: 'Even',
+      summary: 'Control engagement pace with dash-cancels and Spin Dash whiff-punishes, escaping shield pressure with Spring OOS.',
+      neutralKeys: [
+        'Bait burst dash attacks with dash-retreats, then whiff-punish with Spin Dash -> Up-Air.',
+        'Use invincible Up-B (Spring) OOS to escape tight rushdown shield pressure immediately.',
+      ],
+      advantageTips: [
+        'Edgeguard linear burst recoveries with deep Bair or dropped Spring gimps.',
+        'Ledge-trap with repeated short-hop Bairs to cover regular getup and roll.',
+      ],
+      disadvantageTips: [
+        'Avoid panic rolling when rushdown fighters cross up your shield.',
+        'Hold survival DI on sweetspot burst kill confirms.',
+      ],
+    },
+    'Spacing / Swordie': {
+      ratio: '+1 (Slight Advantage)',
+      summary: 'Bait long sword swings with raw ground speed and whiff-punish landing lag with Spin Dash into Fair or Up-Air.',
+      neutralKeys: [
+        'Dash-dance outside sword tipper reach and punish missed aerials with Spin Dash.',
+        'Use Spring OOS when swordfighters land too close on your shield.',
+      ],
+      advantageTips: [
+        'Carry swordfighters off-stage with Spin Dash -> Fair into deep Bair.',
+        'Gimp vertical sword Up-B snaps by dropping Spring off-stage.',
+      ],
+      disadvantageTips: [
+        'Recover high with Spring when swordfighters camp the ledge with D-tilt 2-frames.',
+        'Avoid challenging disjointed sword Up-Airs head-on.',
+      ],
+    },
+    'Super Heavy / Grappler': {
+      ratio: '+2 (Major Advantage)',
+      summary: 'Out-maneuver heavies effortlessly, carry giant hurtboxes into Up-Air ladders, and gimp linear recoveries with Spring.',
+      neutralKeys: [
+        'Hit heavies with Spin Dash -> Up-Air ladders while staying completely outside command grab range.',
+        'Cancel Spin Dash into shield or jump to bait out armored Out-of-Shield reversals.',
+      ],
+      advantageTips: [
+        'Drop Spring directly onto linear heavy recoveries off-stage for instant gimps.',
+        'Close stocks at the ledge with Bair or F-smash.',
+      ],
+      disadvantageTips: [
+        'Never overextend into command grab range when holding a stock lead.',
+        'Respect super-armored recovery moves when challenging off-stage.',
+      ],
+    },
+    'Dynamic / Stance': {
+      ratio: 'Even',
+      summary: 'Out-camp power stances with raw movement speed and bait agility counters with Spin Dash shield-cancels into Grab.',
+      neutralKeys: [
+        'Camp slow power stances patiently from distance and punish whiffed swings with Spin Dash.',
+        'Shield-cancel Spin Dash against agility fighters to bait evasion counters into Grab.',
+      ],
+      advantageTips: [
+        'Drop Spring off-stage to disrupt vulnerable vertical recoveries.',
+        'Carry lighter stance fighters to the top blast zone with Up-Air ladders.',
+      ],
+      disadvantageTips: [
+        'Watch for Foresight/counter activations slowing down linear Homing Attacks.',
+        'Never challenge high-priority power-stance smash attacks head-on.',
+      ],
+    },
+    'Hit-and-Run / Speedster': {
+      ratio: 'Even',
+      summary: 'Hold center stage and stuff rival burst entries with low-spaced F-tilt and Nair instead of trading reckless Spin Dashes.',
+      neutralKeys: [
+        'Hold center stage and throw out low-spaced F-tilt or Nair to beat incoming Spin Dashes.',
+        'Use dash-shield to absorb rival burst hits and take turn advantage.',
+      ],
+      advantageTips: [
+        'Contest high Spring recovery escapes with full-hop Bair.',
+        'Ledge-trap with Bair to cover jump and regular getups.',
+      ],
+      disadvantageTips: [
+        'Vary recovery drift and Spring height to avoid getting stage-spiked.',
+        'SDI outward against vertical juggle ladders.',
+      ],
+    },
+  },
   matchups: {
     toon_link: {
       ratio: '+2 (Major Advantage)',

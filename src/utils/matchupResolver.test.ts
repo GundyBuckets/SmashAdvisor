@@ -1,19 +1,21 @@
 // src/utils/matchupResolver.test.ts
 import { describe, it, expect } from 'vitest';
+import type { CharacterProfile } from '../types/matchup.js';
 import { roster } from '../data/roster.js';
 import { characterRegistry } from '../data/characters/index.js';
 import { resolveMatchup } from './matchupResolver.js';
 
 describe('SmashAdvisor Data Integrity & Matchup Resolver', () => {
-  const registeredCharacters = Object.values(characterRegistry);
+  const registeredCharacters: CharacterProfile[] = Object.values(characterRegistry);
 
   it('keeps roster.ts and characterRegistry completely synchronized', () => {
     expect(roster.length).toBeGreaterThan(0);
 
     for (const entry of roster) {
       const profile = characterRegistry[entry.id];
-      expect(profile, `Missing registry entry for roster ID: ${entry.id}`).toBeDefined();
-      if (!profile) continue;
+      if (!profile) {
+        throw new Error(`Missing registry entry for roster ID: ${entry.id}`);
+      }
       expect(profile.displayName).toBe(entry.name);
       expect(profile.archetype).toBe(entry.archetype);
     }
@@ -39,17 +41,13 @@ describe('SmashAdvisor Data Integrity & Matchup Resolver', () => {
         const result = resolveMatchup(player, opponent);
         const hasDirectMatchup = Boolean(player.matchups[opponent.characterId]);
 
-        // Core string fields must never be empty
         expect(result.ratio.trim().length).toBeGreaterThan(0);
         expect(result.summary.trim().length).toBeGreaterThan(0);
-
-        // SRS Section 4 Schema Check: 2–4 neutral keys and populated tip arrays
         expect(result.neutralKeys.length).toBeGreaterThanOrEqual(2);
         expect(result.neutralKeys.length).toBeLessThanOrEqual(4);
         expect(result.advantageTips.length).toBeGreaterThan(0);
         expect(result.disadvantageTips.length).toBeGreaterThan(0);
 
-        // Verify fallback flag triggers if and only if 1-to-1 data is absent
         if (hasDirectMatchup) {
           expect(result.isArchetypeFallback).toBe(false);
           directCount++;
@@ -65,18 +63,41 @@ describe('SmashAdvisor Data Integrity & Matchup Resolver', () => {
         `(${directCount} 1-to-1 guides, ${fallbackCount} archetype fallbacks).`
     );
   });
+
   it('resolves competitive shorthand aliases case-insensitively', () => {
     const filterRoster = (query: string) => {
       const q = query.trim().toLowerCase();
       return roster.filter(
         (entry) =>
           entry.name.toLowerCase().includes(q) ||
-          entry.aliases.some((alias) => alias.toLowerCase().includes(q))
+          entry.aliases?.some((alias) => alias.toLowerCase().includes(q))
       );
     };
 
     expect(filterRoster('dk').some((c) => c.id === 'donkey_kong')).toBe(true);
     expect(filterRoster('TL').some((c) => c.id === 'toon_link')).toBe(true);
     expect(filterRoster('aegis').some((c) => c.id === 'pyra_mythra')).toBe(true);
+  });
+
+  it('resolves Tier 2 character-specific archetypeNotes before global defaults', () => {
+    const mockOpponent: CharacterProfile = {
+      characterId: 'test_heavy',
+      displayName: 'Test Heavy',
+      iconPath: '/icons/donkey_kong.png',
+      archetype: 'Super Heavy / Grappler',
+      fastestOOS: 'Up-B (Frame 6)',
+      matchups: {},
+    };
+
+    const toonLink = characterRegistry['toon_link'];
+    if (!toonLink) {
+      throw new Error('Expected toon_link to exist in characterRegistry');
+    }
+
+    const result = resolveMatchup(toonLink, mockOpponent);
+
+    expect(result.isArchetypeFallback).toBe(true);
+    expect(result.summary).toContain('[Archetype Matchup]');
+    expect(result.neutralKeys.length).toBeGreaterThanOrEqual(2);
   });
 });

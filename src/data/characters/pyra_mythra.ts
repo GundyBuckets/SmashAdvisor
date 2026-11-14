@@ -6,6 +6,104 @@ export const pyraMythra: CharacterProfile = {
   iconPath: '/icons/pyra_mythra.png',
   archetype: 'Dynamic Stance',
   fastestOOS: 'Mythra Nair (Frame 8), Pyra Up-B (Frame 13)',
+  archetypeNotes: {
+    'Zoner / Trapper': {
+      ratio: '+1 (Slight Advantage)',
+      summary: 'Use Mythra’s ground speed and Foresight to bypass projectiles, then swap to Pyra at 80%+ for early kill confirms.',
+      neutralKeys: [
+        'Weave through projectile walls with Mythra’s dash speed and trigger Foresight on predictable shots.',
+        'Swap to Pyra once the zoner is cornered or above 80% to threaten D-tilt -> Up-Air/Up-Smash.',
+      ],
+      advantageTips: [
+        'Ledge-trap zoners with Pyra’s Blazing End (Side-B) to cover neutral getup and roll simultaneously.',
+        'Juggle floaty zoner descents with Mythra Up-Air ladders.',
+      ],
+      disadvantageTips: [
+        'Swap to Mythra off-stage for better horizontal drift and Photon Edge recovery mixups.',
+        'Do not land unsafely onto fast zoner Out-of-Shield options.',
+      ],
+    },
+    'Rushdown / Burst': {
+      ratio: '+1 (Slight Advantage)',
+      summary: 'Match rushdown frame data with Mythra’s D-tilt and Nair, using Foresight to reverse aggressive multi-hit strings.',
+      neutralKeys: [
+        'Contest rushdown dash-ins with Mythra’s disjointed D-tilt and Frame 8 Nair.',
+        'Use Foresight dodge windows to punish aggressive multi-hit pressure.',
+      ],
+      advantageTips: [
+        'Swap to Pyra at ledge and confirm D-tilt -> Up-Air or Prominence Revolt (Up-B) kills.',
+        'Use Pyra Dair spikes off-stage against linear burst recoveries.',
+      ],
+      disadvantageTips: [
+        'SDI outward against multi-hit ladder combos.',
+        'Switch to Mythra immediately when knocked off-stage to maximize recovery distance.',
+      ],
+    },
+    'Spacing / Swordie': {
+      ratio: '+1 (Slight Advantage)',
+      summary: 'Out-footwork rival swordies with Mythra in neutral, then swap to Pyra at ledge to dominate with massive disjoints.',
+      neutralKeys: [
+        'Bait rival sword swings with Mythra’s superior dash speed and punish landing lag with D-tilt.',
+        'Use Pyra’s safe spaced Fair and D-tilt to wall out approaches once you hold stage control.',
+      ],
+      advantageTips: [
+        'Pin swordfighters at the ledge with Pyra’s Blazing End into Dair or F-smash.',
+        'Use Mythra’s speed to tech-chase platform landings.',
+      ],
+      disadvantageTips: [
+        'Recover low with Mythra to avoid getting clipped by off-stage sword Counters.',
+        'Keep shield up against fast sword Up-B OOS reversals.',
+      ],
+    },
+    'Super Heavy / Grappler': {
+      ratio: '+2 (Major Advantage)',
+      summary: 'Build 0–65% effortlessly with Mythra’s D-tilt and Nair loops, then swap to Pyra to kill heavies under 75%.',
+      neutralKeys: [
+        'Abuse Mythra’s D-tilt -> Nair -> Up-Air combos on massive hurtboxes.',
+        'Swap to Pyra at 65–75% to threaten D-tilt -> Up-Smash and Dair -> Up-Smash confirms.',
+      ],
+      advantageTips: [
+        'Edgeguard linear heavy recoveries with Pyra’s massive Dair spike.',
+        'Trap ledge getups with Pyra’s Blazing End.',
+      ],
+      disadvantageTips: [
+        'Respect mid-percent grab kill confirms; space Mythra D-tilt at max sword tip.',
+        'Do not challenge armored heavy moves directly with Pyra’s slower startup.',
+      ],
+    },
+    'Dynamic / Stance': {
+      ratio: 'Even',
+      summary: 'Control neutral pace with Mythra’s speed and Foresight, reserving Pyra strictly for confirmed advantage and ledge traps.',
+      neutralKeys: [
+        'Use Mythra’s D-tilt and Grab to out-pace rival agility forms.',
+        'Punish rival stance-swap animations with Mythra’s burst Dash Attack.',
+      ],
+      advantageTips: [
+        'Swap to Pyra at the ledge to cover vertical recovery gaps with Blazing End and Dair.',
+        'Confirm Pyra D-tilt -> Up-Air kills around 85%.',
+      ],
+      disadvantageTips: [
+        'Always recover with Mythra; Pyra’s vertical recovery is easily intercepted.',
+        'SDI outward against multi-hit agility strings.',
+      ],
+    },
+    'Hit-and-Run / Speedster': {
+      ratio: 'Even',
+      summary: 'Stay in Mythra to match speedster movement and trigger Foresight on burst dash approaches.',
+      neutralKeys: [
+        'Hold center stage in Mythra and stuff burst dash entries with disjointed D-tilt.',
+        'Trigger Foresight against predictable spin approaches for free Smash or Grab punishes.',
+      ],
+      advantageTips: [
+        'Swap to Pyra only after securing a knockdown or ledge trap to close stocks early.',
+        'Juggle speedsters with Mythra Up-Air chains.',
+      ],
+      disadvantageTips: [
+        'Mix up recovery drift with Mythra to avoid deep Bair stage-spikes.',
+        'Avoid swapping to Pyra while stuck in disadvantage.',
+      ],
+    },
+  },
   matchups: {
     toon_link: {
       ratio: '+1 (Slight Advantage)',

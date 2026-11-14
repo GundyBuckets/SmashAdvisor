@@ -6,6 +6,104 @@ export const donkey_kong: CharacterProfile = {
     iconPath: '/icons/donkey_kong.png',
     archetype: 'Super Heavy / Grappler',
     fastestOOS: 'Spinning Kong Grounded (Frame 4)',
+    archetypeNotes: {
+    'Zoner / Trapper': {
+      ratio: '-1 (Slight Disadvantage)',
+      summary: 'Walk and parry projectiles patiently, charge Giant Punch during safe pauses, and cash in with Cargo Throw.',
+      neutralKeys: [
+        'Parry incoming projectiles to preserve shield health and advance into Bair spacing.',
+        'Charge Giant Punch during full-screen pauses so super armor threatens every approach.',
+      ],
+      advantageTips: [
+        'Execute Cargo Off-Stage Throws into stage-spike setups at mid-percents.',
+        'Use armored Giant Punch or Hand Slap to catch panic ledge jumps.',
+      ],
+      disadvantageTips: [
+        'Save double-jump off-stage until zoners commit to primary projectile drops.',
+        'DI outward against projectile-to-smash combo setups.',
+      ],
+    },
+    'Rushdown / Burst': {
+      ratio: '-2 (Major Disadvantage)',
+      summary: 'Break tight shield pressure with super-armored grounded Up-B (Spinning Kong) OOS and wall approaches with spaced Bair.',
+      neutralKeys: [
+        'Buffer grounded Spinning Kong (super armor Frames 5–17) OOS against unspaced rushdown pressure.',
+        'Space retreating Bair at max reach to keep burst fighters out of your face.',
+      ],
+      advantageTips: [
+        'Carry rushdown fighters off-stage with Cargo Throw to exploit short recoveries.',
+        'Fish for D-tilt trips at ledge into instant F-smash or Giant Punch finishes.',
+      ],
+      disadvantageTips: [
+        'Never recover high into predictable off-stage counters; snap cleanly to the ledge.',
+        'SDI multi-hit combos outward to escape top-blast-zone kill confirms.',
+      ],
+    },
+    'Spacing / Swordie': {
+      ratio: '-2 (Major Disadvantage)',
+      summary: 'Walk-parry sword tippers instead of jumping into anti-airs, and punish unspaced landings with Grab or Up-B OOS.',
+      neutralKeys: [
+        'Advance with walk-shield and parries rather than jumping into disjointed sword aerials.',
+        'Punish unspaced sword landings with Frame 6 Jab, Grab, or armored Spinning Kong OOS.',
+      ],
+      advantageTips: [
+        'Cargo Throw swordfighters off-stage toward the blast zone to tax horizontal drift.',
+        'Use D-tilt at ledge to fish for trips into charged F-smash.',
+      ],
+      disadvantageTips: [
+        'Vary recovery height and timing drastically to avoid off-stage sword Counters.',
+        'DI outward on high-altitude disjoint strings to survive longer.',
+      ],
+    },
+    'Super Heavy / Grappler': {
+      ratio: 'Even',
+      summary: 'Dominate the heavy mirror with superior Bair range, Cargo Up-Throw -> Up-Air combos, and armored Giant Punch trades.',
+      neutralKeys: [
+        'Space Bair chains at mid-range to out-poke rival heavies safely.',
+        'Threaten super-armored Giant Punch to win trade wars at high percent.',
+      ],
+      advantageTips: [
+        'Confirm Cargo Up-Throw into Up-Air strings on massive hurtboxes.',
+        'Ledge-trap wide ledge hangs with D-tilt and armored Giant Punch.',
+      ],
+      disadvantageTips: [
+        'Hold survival DI on rival heavy kill throws starting at 65%.',
+        'Buffer tech on off-stage stage-spike attempts.',
+      ],
+    },
+    'Dynamic / Stance': {
+      ratio: '-2 (Major Disadvantage)',
+      summary: 'Use armored Spinning Kong OOS to escape multi-hit agility strings and punish slow power-stance whiff lag with Grab.',
+      neutralKeys: [
+        'Punish multi-hit agility shield pressure with super-armored grounded Up-B OOS.',
+        'Bait slow power-stance smash attacks and punish recovery lag with Dash Attack or Grab.',
+      ],
+      advantageTips: [
+        'Cargo Throw stance fighters off-stage to exploit weak vertical recoveries.',
+        'D-tilt at ledge covers vulnerable recovery snap frames.',
+      ],
+      disadvantageTips: [
+        'Never challenge high-priority power-stance smash attacks head-on.',
+        'SDI outward against multi-hit agility combos.',
+      ],
+    },
+    'Hit-and-Run / Speedster': {
+      ratio: '-2 (Major Disadvantage)',
+      summary: 'Hold center stage and swat burst dash entries with low-spaced Bair and armored Spinning Kong OOS.',
+      neutralKeys: [
+        'Hold center stage and throw out low-spaced Bair to intercept high-speed dash lanes.',
+        'Use armored Spinning Kong OOS whenever speedsters cross up shield.',
+      ],
+      advantageTips: [
+        'Cargo Throw speedsters off-stage to force early vertical recovery commitments.',
+        'Anti-air high recovery escapes with Up-Smash or Up-Air.',
+      ],
+      disadvantageTips: [
+        'Never chase speedsters deep off-stage where Spring or aerial gimps kill heavy recoveries.',
+        'SDI outward against vertical ladder combos.',
+      ],
+    },
+  },
     matchups: {
       toon_link: {
         ratio: '-1 (Slight Disadvantage)',

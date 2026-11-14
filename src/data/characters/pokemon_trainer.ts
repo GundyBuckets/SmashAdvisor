@@ -6,6 +6,104 @@ export const pokemonTrainer: CharacterProfile = {
   iconPath: '/icons/pokemon_trainer.png',
   archetype: 'Multi-Fighter Stance',
   fastestOOS: 'Squirtle Up-B (Frame 5), Ivysaur Nair (Frame 12)',
+  archetypeNotes: {
+    'Zoner / Trapper': {
+      ratio: 'Even',
+      summary: 'Weave under projectiles with Squirtle, match mid-range with Ivysaur Razor Leaf, and close stocks with Charizard.',
+      neutralKeys: [
+        'Use Squirtle’s low profile and fast ground speed to weave inside projectile deadzones.',
+        'Swap to Ivysaur to contest mid-range with Razor Leaf and disjointed Bair.',
+      ],
+      advantageTips: [
+        'Edgeguard floaty zoners with Ivysaur Dair spikes or Vine Whip (Up-B) sweetspots.',
+        'Swap to Charizard above 100% for Frame 6 Up-Smash OOS and Bair kills.',
+      ],
+      disadvantageTips: [
+        'Use Pokémon Change invulnerability frames (Frames 1–24) to escape trap setups.',
+        'Recover with Charizard’s extra mid-air jump when knocked far off-stage.',
+      ],
+    },
+    'Rushdown / Burst': {
+      ratio: 'Even',
+      summary: 'Win early scrambles with Squirtle’s Frame 4 Nair and Frame 5 Up-B OOS, then switch to Ivysaur and Charizard as percent rises.',
+      neutralKeys: [
+        'Match close-range rushdown frame data with Squirtle’s Nair and Grab combos.',
+        'Wall out burst dash-ins at mid-percent with Ivysaur’s retreating Bair.',
+      ],
+      advantageTips: [
+        'Confirm Ivysaur D-throw -> Vine Whip to take stocks around 85–100%.',
+        'Punish aggressive landings with Charizard’s Frame 6 Up-Smash OOS.',
+      ],
+      disadvantageTips: [
+        'Use Pokémon Change invulnerability to break out of tight juggle pressure.',
+        'Switch to Charizard for heavy survivability and extra jumps when recovering.',
+      ],
+    },
+    'Spacing / Swordie': {
+      ratio: 'Even',
+      summary: 'Whiff-punish sword swings with Squirtle’s dash speed and contest mid-range spacing with Ivysaur’s Bair and Razor Leaf.',
+      neutralKeys: [
+        'Use Ivysaur’s Razor Leaf and long-reaching Bair to match sword disjoints.',
+        'Dash-dance with Squirtle to whiff-punish extended sword aerials into Grab combos.',
+      ],
+      advantageTips: [
+        '2-frame vertical sword recoveries at the ledge with Ivysaur’s massive Dair hitbox.',
+        'Close high-percent stocks with Charizard Bair or Flare Blitz tech-chases.',
+      ],
+      disadvantageTips: [
+        'Avoid recovering linearly with Ivysaur’s tether against sword Counters; switch to Charizard.',
+        'Use Pokémon Change invulnerability to escape corner landing traps.',
+      ],
+    },
+    'Super Heavy / Grappler': {
+      ratio: '+2 (Major Advantage)',
+      summary: 'Build 0–60% instantly with Squirtle throw loops, spike recoveries with Ivysaur Dair, and kill early with Charizard.',
+      neutralKeys: [
+        'Open every stock with Squirtle D-throw / Up-throw loops on giant hurtboxes.',
+        'Switch to Ivysaur at 50% to wall out heavy approaches with Bair and Razor Leaf.',
+      ],
+      advantageTips: [
+        'Intercept linear heavy recoveries with Ivysaur’s Dair spike or Vine Whip.',
+        'Use Charizard’s Frame 6 Up-Smash OOS to kill heavies landing on shield.',
+      ],
+      disadvantageTips: [
+        'Respect mid-percent grab kill setups; switch off Squirtle before 70% to avoid early death.',
+        'Use Charizard’s weight and extra jumps to survive heavy edgeguards.',
+      ],
+    },
+    'Dynamic / Stance': {
+      ratio: 'Even',
+      summary: 'Cycle through Squirtle, Ivysaur, and Charizard cleanly by percent to always hold the matchup tool advantage.',
+      neutralKeys: [
+        'Use Squirtle (0–45%) for combo speed, Ivysaur (45–95%) for disjoint walls, and Charizard (95%+) for survivability.',
+        'Punish rival stance swaps with Ivysaur Razor Leaf into Vine Whip.',
+      ],
+      advantageTips: [
+        'Exploit weak vertical recoveries with Ivysaur Dair spikes.',
+        'Ledge-trap with Charizard Flamethrower to catch regular getup and jump.',
+      ],
+      disadvantageTips: [
+        'Leverage Pokémon Change invulnerability frames to escape disadvantage strings.',
+        'Recover high with Charizard’s extra mid-air jump.',
+      ],
+    },
+    'Hit-and-Run / Speedster': {
+      ratio: 'Even',
+      summary: 'Hold center stage with Ivysaur’s Bair walls and punish cross-up spin attacks with Charizard’s Frame 6 Up-Smash OOS.',
+      neutralKeys: [
+        'Wall out high-speed dash lanes with Ivysaur’s Razor Leaf and retreating Bair.',
+        'Switch to Charizard at higher percents to punish cross-ups with Frame 6 Up-Smash OOS.',
+      ],
+      advantageTips: [
+        'Swat high recovery arcs with Ivysaur Up-Air or Vine Whip.',
+        'Ledge-trap with Charizard Flamethrower to cover jump escapes.',
+      ],
+      disadvantageTips: [
+        'Use Charizard’s extra jumps to avoid getting stage-spiked by deep Bairs.',
+        'SDI outward against vertical ladder combos.',
+      ],
+    },
+  },
   matchups: {
     toon_link: {
       ratio: 'Even',

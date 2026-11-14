@@ -6,6 +6,104 @@ export const steve: CharacterProfile = {
     iconPath: '/icons/steve.png',
     archetype: 'Resource Builder / Trapper',
     fastestOOS: 'Up-Tilt (Frame 4), Anvil Down-Air (Frame 18)',
+    archetypeNotes: {
+    'Zoner / Trapper': {
+      ratio: '+1 (Slight Advantage)',
+      summary: 'Erect vertical block walls to block horizontal projectiles and mine safely until you hold Diamond and Gold resources.',
+      neutralKeys: [
+        'Build a 2-to-3 block wall at mid-stage to block projectiles and mine for Diamond tools.',
+        'Force rival zoners to approach your block shelter rather than trading projectiles.',
+      ],
+      advantageTips: [
+        'Confirm Frame 4 Up-Tilt into Up-Air ladders and Diamond Back-Air kills.',
+        'Place blocks off-stage to block horizontal zoner recovery paths.',
+      ],
+      disadvantageTips: [
+        'Use Minecart (Side-B) to armor through trap setups and regain stage center.',
+        'Save crafting table placements for safe respawn or off-stage edgeguard windows.',
+      ],
+    },
+    'Rushdown / Burst': {
+      ratio: '+1 (Slight Advantage)',
+      summary: 'Place single-block buffers to stop burst dashes and threaten Frame 4 Up-Tilt and Minecart reversals.',
+      neutralKeys: [
+        'Drop a single dirt/wood block in front of you to disrupt rushdown dash-attack spacing.',
+        'Stuff close-range approaches with walking Jab and Frame 4 Up-Tilt.',
+      ],
+      advantageTips: [
+        'Execute Up-Tilt -> Up-Air -> Block extension combos for 60%+ damage bursts.',
+        'Place ledge blocks to block linear rushdown recovery angles.',
+      ],
+      disadvantageTips: [
+        'Drop Anvil (Dair) sparingly when juggled; mix up landing with empty Minecart jumps.',
+        'Keep Iron in stock so Minecart is always available to escape corner pressure.',
+      ],
+    },
+    'Spacing / Swordie': {
+      ratio: '+1 (Slight Advantage)',
+      summary: 'Force swordfighters to burn swings breaking block walls while you mine, then punish approach gaps with Minecart.',
+      neutralKeys: [
+        'Build block walls to force swordfighters into predictable aerial swings over the top.',
+        'Punish sword landings with Frame 4 Up-Tilt or Minecart command grab.',
+      ],
+      advantageTips: [
+        'Place blocks off-stage to intercept vertical sword Up-B snaps.',
+        'Close stocks early with Diamond F-smash or Back-Air.',
+      ],
+      disadvantageTips: [
+        'Do not spam Anvil predictably from above against fast sword Up-Airs.',
+        'Use Minecart horizontal momentum + Elytra to recover safely from deep off-stage.',
+      ],
+    },
+    'Super Heavy / Grappler': {
+      ratio: '+2 (Major Advantage)',
+      summary: 'Wall off command grab approaches with blocks and shred giant hurtboxes with Up-Tilt ladders and Minecart spikes.',
+      neutralKeys: [
+        'Build block barriers to block command grab dash-ins while mining for Diamond.',
+        'Catch giant hurtboxes with Frame 4 Up-Tilt -> Up-Air chains.',
+      ],
+      advantageTips: [
+        'Ride Minecart off-stage into Fair spike to gimp linear heavy recoveries.',
+        'Place ledge blocks to force heavies into high, punishable recovery arcs.',
+      ],
+      disadvantageTips: [
+        'Respect heavy armored moves that break through wood/dirt blocks in one hit.',
+        'Keep shield healthy and punish heavy landings with Frame 4 Up-Tilt OOS.',
+      ],
+    },
+    'Dynamic / Stance': {
+      ratio: '+1 (Slight Advantage)',
+      summary: 'Wall out agility stances with blocks to farm resources, and punish slow power-stance startups with Minecart.',
+      neutralKeys: [
+        'Use block walls to slow down agility movement and force predictable jump entries.',
+        'Punish slow power-stance swings with Minecart or Diamond F-smash.',
+      ],
+      advantageTips: [
+        'Block off vertical recovery paths at the ledge with 2-block overhangs.',
+        'Execute Up-Tilt ladders to carry stance fighters off the top blast zone.',
+      ],
+      disadvantageTips: [
+        'Watch for evasion counters (like Foresight) when throwing predictable Minecarts.',
+        'Use Minecart jumps to escape multi-hit agility strings.',
+      ],
+    },
+    'Hit-and-Run / Speedster': {
+      ratio: 'Even',
+      summary: 'Construct L-shaped block shelters to halt burst spin dashes and catch close-range entries with Frame 4 Up-Tilt.',
+      neutralKeys: [
+        'Place L-shaped block walls to stop grounded burst dashes and force speedsters airborne.',
+        'Stuff close-range spin entries with walking Jab and Frame 4 Up-Tilt.',
+      ],
+      advantageTips: [
+        'Place high blocks to interrupt speedster Spring recovery trajectories.',
+        'Confirm Up-Tilt chains into Diamond Up-Smash or Back-Air.',
+      ],
+      disadvantageTips: [
+        'Avoid dropping predictable Anvils when speedsters bait landings from below.',
+        'Use Minecart + Elytra to mix up recovery heights.',
+      ],
+    },
+  },
     matchups: {
       toon_link: {
         ratio: '+1 (Slight Advantage)',

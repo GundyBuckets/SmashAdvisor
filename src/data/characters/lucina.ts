@@ -6,6 +6,104 @@ export const lucina: CharacterProfile = {
     iconPath: '/icons/lucina.png',
     archetype: 'Spacing / Fundamentals',
     fastestOOS: 'Dolphin Slash Up-B (Frame 5, Frame 1 Invulnerable)',
+    archetypeNotes: {
+    'Zoner / Trapper': {
+      ratio: 'Even',
+      summary: 'Cleave through physical projectiles and items with short-hop Fair/Nair while walking zoners into the corner.',
+      neutralKeys: [
+        'Use short-hop Fair and F-tilt to swat away items and projectiles mid-air.',
+        'Walk and parry behind shield to corner zoners without committing to unsafe jumps.',
+      ],
+      advantageTips: [
+        'Edgeguard floaty zoners off-stage with run-off Fair/Bair before tether snap engages.',
+        'Use Counter off-stage to punish multi-hit vertical recovery specials.',
+      ],
+      disadvantageTips: [
+        'Drift to the ledge with Fair rather than landing directly onto stationary bombs.',
+        'Use Frame 5 invincible Dolphin Slash (Up-B) to escape shield trap pressure.',
+      ],
+    },
+    'Rushdown / Burst': {
+      ratio: '+1 (Slight Advantage)',
+      summary: 'Wall out aggressive burst entries with retreating Fair and D-tilt, backed by Frame 5 invincible Up-B OOS.',
+      neutralKeys: [
+        'Space retreating short-hop Fair and D-tilt to keep rushdown fighters at max sword tip.',
+        'Punish any unspaced landing or cross-up immediately with Frame 5 Dolphin Slash OOS.',
+      ],
+      advantageTips: [
+        'Use D-tilt at ledge to 2-frame linear rushdown recovery snaps.',
+        'Punish high recovery drift with full-hop Bair.',
+      ],
+      disadvantageTips: [
+        'Keep shield up against multi-hit burst specials until the final hit before using Up-B OOS.',
+        'Mix up high drift and instant low Dolphin Slash snaps when recovering.',
+      ],
+    },
+    'Spacing / Swordie': {
+      ratio: 'Even',
+      summary: 'Win the spacing mirror through disciplined footwork, D-tilt ledge traps, and Frame 5 Up-B Out-of-Shield punishes.',
+      neutralKeys: [
+        'Space every Fair and Bair at maximum reach; avoid landing close enough to eat rival Up-B OOS.',
+        'Whiff-punish missed aerials with fast-falling F-tilt or D-tilt.',
+      ],
+      advantageTips: [
+        'Time D-tilt at the ledge to catch rival Up-B 2-frame windows.',
+        'Use Counter off-stage against predictable vertical sword recoveries.',
+      ],
+      disadvantageTips: [
+        'Hold survival DI outward on F-smash and Up-B kill confirms near stage edges.',
+        'Never challenge rival disjoints from below during landing disadvantage.',
+      ],
+    },
+    'Super Heavy / Grappler': {
+      ratio: '+2 (Major Advantage)',
+      summary: 'Shut down heavy approaches with safe sword walls and dominate off-stage with run-off Fair and Counter.',
+      neutralKeys: [
+        'Space retreating Fair and D-tilt continuously; heavies cannot contest disjoints cleanly.',
+        'Never land unsafely on shield to avoid fast heavy Out-of-Shield grabs.',
+      ],
+      advantageTips: [
+        'Run off with Fair/Bair or use Counter to beat super-armor heavy recoveries for early stocks.',
+        'Ledge-trap with D-tilt into F-smash tech-chase setups.',
+      ],
+      disadvantageTips: [
+        'Respect mid-percent grab kill confirms; avoid shielding predictably.',
+        'DI away from low-tilt trip setups to prevent F-smash followups.',
+      ],
+    },
+    'Dynamic / Stance': {
+      ratio: 'Even',
+      summary: 'Out-frame slow power forms with D-tilt and Fair, and shut down agility multi-hits with Frame 5 Up-B OOS.',
+      neutralKeys: [
+        'Contest agility dash-ins with retreating Fair and low-profile D-tilt.',
+        'Bait slow power-stance swings and whiff-punish with F-tilt or Grab.',
+      ],
+      advantageTips: [
+        'D-tilt at ledge catches vertical recoveries that lack upward hitboxes.',
+        'Counter off-stage stops high-speed recovery lunges cleanly.',
+      ],
+      disadvantageTips: [
+        'Avoid panic rolling out of multi-hit agility strings.',
+        'DI outward from high-priority power-stance smash attacks.',
+      ],
+    },
+    'Hit-and-Run / Speedster': {
+      ratio: '-1 (Slight Disadvantage)',
+      summary: 'Restrict high-commitment jumps and use grounded D-tilt and Jab pokes to stuff burst dash entries.',
+      neutralKeys: [
+        'Use grounded D-tilt and Frame 5 Jab rather than floaty aerials to swat burst dashes.',
+        'Buffer Frame 5 Dolphin Slash OOS whenever speedsters cross up shield with spin moves.',
+      ],
+      advantageTips: [
+        'Swat high recovery arcs with full-hop Nair or Bair.',
+        'Ledge-trap with Jab -> F-tilt to cover regular getup and roll.',
+      ],
+      disadvantageTips: [
+        'Vary recovery drift to avoid getting stage-spiked by deep Bairs.',
+        'SDI outward against vertical ladder juggle strings.',
+      ],
+    },
+  },
     matchups: {
       toon_link: {
         ratio: '+1 (Slight Advantage)',
