@@ -57,11 +57,11 @@ export const CharacterGrid: React.FC<CharacterGridProps> = ({
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search by name or alias (e.g., 'DK', 'TL', 'Roy')..."
-          className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-slate-100 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 min-h-[44px]"
+          className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-slate-100 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 min-h-11"
         />
       </div>
 
-      <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-2 max-h-[380px] overflow-y-auto p-1 rounded-lg border border-slate-800/80 bg-slate-900/50">
+      <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-2 max-h-95 overflow-y-auto p-1 rounded-lg border border-slate-800/80 bg-slate-900/50">
         {filteredRoster.map((character) => (
           <CharacterTile
             key={character.id}

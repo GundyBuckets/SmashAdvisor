@@ -9,6 +9,7 @@ import { pokemonTrainer } from './pokemon_trainer.js';
 import { lucas } from './lucas.js';
 import { steve } from './steve.js';
 import { sonic } from './sonic.js';
+import { joker } from './joker.js';
 
 export const characterRegistry: Record<string, CharacterProfile> = {
   toon_link: toonLink,
@@ -21,4 +22,5 @@ export const characterRegistry: Record<string, CharacterProfile> = {
   lucas: lucas,
   steve: steve,
   sonic: sonic,
+  joker: joker,
 };

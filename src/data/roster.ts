@@ -16,5 +16,6 @@ export const roster: RosterEntry[] = [
   { id: 'steve', name: 'Steve', archetype: 'Resource Builder / Trapper', iconPath: '/icons/steve.png', aliases: ['minecraft', 'alex', 'zombie'] },
   { id: 'pyra_mythra', name: 'Pyra / Mythra', archetype: 'Dynamic Stance', iconPath: '/icons/pyra_mythra.png', aliases: ['aegis', 'pythra'] },
   { id: 'pokemon_trainer', name: 'Pokémon Trainer', archetype: 'Multi-Fighter Stance', iconPath: '/icons/pokemon_trainer.png', aliases: ['pt', 'squirtle', 'ivysaur', 'charizard'] },
-  { id: 'sonic', name: 'Sonic', archetype: 'Hit-and-Run / Speedster', iconPath: '/icons/sonic.png', aliases: ['blue blur'] }
+  { id: 'sonic', name: 'Sonic', archetype: 'Hit-and-Run / Speedster', iconPath: '/icons/sonic.png', aliases: ['blue blur'] },
+  { id: 'joker', name: 'Joker', archetype: 'Dynamic / Stance', iconPath: '/icons/joker.png', aliases: ['persona'] }
 ];

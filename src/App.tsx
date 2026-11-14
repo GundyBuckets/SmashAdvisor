@@ -49,13 +49,13 @@ export default function App() {
             SmashAdvisor
           </h1>
           <span className="text-xs font-semibold text-slate-400 bg-slate-800 px-2 py-0.5 rounded">
-            v0.2 Dev Build
+            v0.3 Dev Build
           </span>
         </div>
       </header>
 
       <main className="flex-1 max-w-2xl w-full mx-auto p-4 flex flex-col gap-4">
-        {playerProfile && opponentProfile ? (
+        {playerProfile && opponentProfile && matchupData ? (
           <MatchupView
             player={playerProfile}
             opponent={opponentProfile}
